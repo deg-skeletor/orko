@@ -31,7 +31,7 @@ During a hook's execution, each file that is copied will be automatically analyz
 * `author`: Your name!
 * `license`: The type of software license your project will use
 
-Replaceable tokens inside of a template's files should follow the `{{tokenName` syntax. For example, if your platform's `package.json ` template file contains a `{{version}}` token, this token will be replaced with the value you supplied to the `Version?` question during the onboarding step, as the file is copied over during hook execution. 
+Replaceable tokens inside of a template's files should follow the `{{tokenName}}` syntax. For example, if your platform's `package.json ` template file contains a `{{version}}` token, this token will be replaced with the value you supplied to the `Version?` question during the onboarding step, as the file is copied over during hook execution. 
 
 ## Platform Templates
 Orko is preconfigured to work with the most common CMS platforms and technology stacks used by DEG. During installation, Orko will prompt you with the following platform choices, each of which will download relevant template files from a predefined Git repository.
