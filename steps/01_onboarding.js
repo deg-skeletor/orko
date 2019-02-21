@@ -22,7 +22,7 @@ const onboarding = () => new Promise(async(resolve, reject) => {
         });
     };
 
-    const sayHello = async () => {
+    const sayHello = () => {
         greet(hello, 'heading');
     };
 

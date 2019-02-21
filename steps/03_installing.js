@@ -35,7 +35,6 @@ const installing = answers => new Promise((resolve, reject) => {
         }
         greet(runningSkeletorInstallTask);
         await copyManager.move(`${tmpPath}/${skelInstallName}`, `${projectPath}/${skelInstallName}`);
-        console.log(projectPath);
         const skelCore = require(`${projectPath}/node_modules/@deg-skeletor/core/index.js`)();
         if (skelCore) {
             skelCore.setConfig({
