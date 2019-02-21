@@ -8,29 +8,18 @@ const housekeeping = require('./steps/05_housekeeping.js');
 
 const orko = () => {
 
-    let answers = {};
-
-    const start = async () => {
+    const start = () => {
         onboarding()
-            .then(onboardingAnswers => appendAnswers('onboarding', onboardingAnswers))
-            .then(() => downloading(answers))
-            .then(() => installing(answers))
-            .then(() => copying(answers))
-            .then(() => housekeeping(answers))
+            .then(downloading)
+            .then(installing)
+            .then(copying)
+            .then(housekeeping)
             .catch(onError);
     };
 
-    const appendAnswers = (key, addedAnswers) => {
-        answers = {
-            ...answers,
-            [key]: addedAnswers
-        };
-        return Promise.resolve();
-    };
-
     const onError = msg => {
-        greet(msg, 'error1');
-        greet(goodbye, 'heading1', 2000);
+        greet(msg, 'error');
+        greet(goodbye, 'heading');
     };
 
     start();

@@ -1,8 +1,12 @@
 module.exports = {
     orkoPath: __dirname,
     projectPath: process.cwd(),
+    tmpName: '.tmp',
     tmpPath: `${process.cwd()}/.tmp`,
-    greetingDuration: 0,
+    skelConfigName: 'skeletor.config.js',
+    skelInstallName: 'skeletor.install.js',
+    orkoConfigName: 'orko.config.js',
+    npmInstallCommand: 'npm install',
     packageDefaults: {
         name: 'Skeletor Project',
         projectType: 'sitecore',

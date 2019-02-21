@@ -1,6 +1,6 @@
 const semverRegex = require('semver-regex');
 const camelize = require('../utils/textUtils.js').camelize;
-const {packageDefaults, projectTypes} = require('../config/settings.js');
+const {packageDefaults, projectTypes} = require('./settings.js');
 
 const isRequired = (answer = null) => {
 	return answer && answer.length > 0;
