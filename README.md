@@ -33,7 +33,8 @@ Orko is preconfigured to work with the most common CMS platforms and technology 
 Each platform repo may contain an orko.config.js file, which is comprised of a configuration object. The `hooks` section of this object will define files to be copied, via an array of objects containing `src` and `dest` properties.
 
 #### Sample orko.config.js file
-```module.exports = {
+```javascript
+module.exports = {
     hooks: {
         afterdownload: [
             {
@@ -60,13 +61,15 @@ Each platform repo may contain an orko.config.js file, which is comprised of a c
             }
         ]
     }
-};```
+};
+```
 
 ### skeletor.install.js
 This optional file will define Skeletor install tasks that will be run after Orko clones the template and installs its dependencies. This file is typically used by Pattern Lab (a static site generator preinstalled by several platform templates) to install a subsequent "starter kit".
 
 #### Sample skeletor.install.js file
-```const {patternLabConfig} = require('./skeletor/common/patterns.config.js');
+```javascript
+const {patternLabConfig} = require('./skeletor/common/patterns.config.js');
 
 module.exports = {
 	name: 'install',
@@ -85,7 +88,8 @@ module.exports = {
 			]
 		}
 	]
-};```
+};
+```
 
 ### orko directory
 This specially-named directory is ignored during Orko's copy step and deleted during cleanup step, making it an excellent place to store template files that will be copied over during hooks defined in your `orko.config.js` file. Typical contents include `.gitignore`, `package.json` and `README.md` files that might conflict with the template repo itself.
