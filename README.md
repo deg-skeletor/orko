@@ -30,7 +30,7 @@ Orko is preconfigured to work with the most common CMS platforms and technology 
 * Sitecore: https://github.com/deg-skeletor/orko-template-sitecore
 
 ### orko.config.js
-Each platform repo may contain an orko.config.js file, which is comprised of a configuration object. The `hooks` section of this object will define files to be copied, via an array of objects containing `src` and `dest` properties.
+Each platform repo may contain an `orko.config.js file`, which is comprised of a configuration object. The `hooks` section of this object will define files to be copied, via an array of objects containing `src` and `dest` properties.
 
 #### Sample orko.config.js file
 ```javascript
