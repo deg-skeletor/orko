@@ -18,5 +18,5 @@ module.exports = {
     copying: `Copying {{src}} to {{dest}}`,
     copyingTmpToProject: `Copying working files into your project's directory.`,
     orkoJunkCleanup: `Cleaning up after myself, almost finished.`,
-    goodbye: `I'm all done. Goodbye!`
+    goodbye: `I'm all done. Type "skel build" to run your first build task, and check out your skeletor.config.js file for other available tasks. Goodbye!`
 };
