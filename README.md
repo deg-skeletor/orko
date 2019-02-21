@@ -6,7 +6,7 @@ Orko is the scaffolding tool for the Skeletor UI build tool ecosystem. By runnin
 Orko is automatically installed alongside the [skeletor-cli](https://github.com/deg-skeletor/skeletor-cli) tools. Once installed, he can be initialized using the `skel init` command.
 
 ## IMPORTANT NOTE
-**Orko is intended to be run only at the start of a project, and will overwrite any conflicting files in the directory from which it is run.** Although there are built-in several confirmation steps to prevent accidental file deletion, it is recommended to only run Orko from an empty directory, or from a directory in which you're OK with files and folders being overwritten.
+**Orko is intended to be run only at the start of a project, and will overwrite any conflicting files in the directory from which it is run.** Although there are several built-in confirmation steps to help prevent accidental file deletion, it is recommended to only run Orko from an empty directory, or from a directory in which you're OK with files and folders being overwritten.
 
 ## Orko Lifecycle
 Once Orko is initiated, it will make its way through 5 steps:
