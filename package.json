@@ -1,5 +1,5 @@
 {
-    "name": "orko",
+    "name": "@deg-skeletor/orko",
     "version": "1.0.0",
     "description": "The scaffolding tool for the Skeletor UI build tool ecosystem",
     "main": "index.js",
@@ -27,7 +27,6 @@
     },
     "dependencies": {
         "chalk": "^2.4.2",
-        "node-typewriter": "^0.0.2",
         "inquirer": "^6.2.2",
         "fs-extra": "^7.0.1",
         "simple-git": "^1.107.0",
