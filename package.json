@@ -1,38 +1,50 @@
 {
-  "name": "orko",
-  "version": "1.0.0",
-  "description": "A scaffolding tool for the Skeletor UI build tool ecosystem",
-  "main": "index.js",
-  "scripts": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/deg-skeletor/orko.git"
-  },
-  "keywords": [
-    "orko",
-    "skeletor",
-    "DEG",
-    "scaffolding",
-    "ui",
-    "build",
-    "tools"
-  ],
-  "author": "Aaron Ladage",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/deg-skeletor/orko/issues"
-  },
-  "homepage": "https://github.com/deg-skeletor/orko#readme",
-  "dependencies": {
-    "chalk": "^2.4.2",
-    "node-typewriter": "^0.0.2",
-    "inquirer": "^6.2.2",
-    "fs-extra": "^7.0.1",
-    "simple-git": "^1.107.0",
-    "replace-in-file": "^3.4.3",
-    "child-process-promise": "^2.2.1",
-    "semver-regex": "^2.0.0"
-  }
+    "name": "orko",
+    "version": "1.0.0",
+    "description": "The scaffolding tool for the Skeletor UI build tool ecosystem",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest",
+        "lint": "eslint index.js"
+    },
+    "author": "Aaron Ladage <aladage@degdigital.com>",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/deg-skeletor/orko.git"
+    },
+    "bugs": {
+        "url": "https://github.com/deg-skeletor/orko/issues"
+    },
+    "homepage": "https://github.com/deg-skeletor/orko#readme",
+    "peerDependencies": {
+        "@deg-skeletor/core": "^1.1.0",
+        "@deg-skeletor/cli": "^1.0.0"
+    },
+    "devDependencies": {
+        "eslint": "^4.17.0",
+        "jest": "^24.1.0"
+    },
+    "dependencies": {
+        "chalk": "^2.4.2",
+        "node-typewriter": "^0.0.2",
+        "inquirer": "^6.2.2",
+        "fs-extra": "^7.0.1",
+        "simple-git": "^1.107.0",
+        "replace-in-file": "^3.4.3",
+        "child-process-promise": "^2.2.1",
+        "semver-regex": "^2.0.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "keywords": [
+        "orko",
+        "skeletor",
+        "DEG",
+        "scaffolding",
+        "ui",
+        "build",
+        "tools"
+    ]
 }
