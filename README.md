@@ -10,7 +10,7 @@ Orko is automatically installed alongside the [skeletor-cli](https://github.com/
 
 ## Orko Lifecycle
 Once Orko is initiated, it will make its way through 5 steps:
-1. **Onboarding.** During onboarding, Orko will say hello, check for existing project files and make sure you're OK overwriting them if they exist. He will also ask several questions about your project, including typical package.json configuration values.
+1. **Onboarding.** During onboarding, Orko will say hello, check for existing project files and make sure you're OK overwriting them if they exist. He will also ask several questions about your project, including typical `package.json` configuration values.
 2. **Downloading.** During downloading, Orko will download the templates files from your platform choice during onboarding into a `.tmp` directory, and then prep these files for installation and copying. *Hooks available: `afterdownload`*
 3. **Installing.** During installation, Orko will copy a few essential files (such as `package.json` and `skeletor.install.js`) to your project directory and run an `npm install`. *Hooks available: `afterinstall`*
 4. **Copying.** Up to this point, most of the files Orko has worked on have existed in a `.tmp` directory. During this step, Orko will copy these temporary files into your project directory, overwriting anything that gets in its way.
