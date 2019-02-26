@@ -1,6 +1,6 @@
 # Orko
 
-Orko is the scaffolding tool for the Skeletor UI build tool ecosystem. By running Orko at the beginning of a project, you can build out an entire Skeletor-enabled UI project, preconfigured to work with the platform of your choice.
+Orko is the scaffolding tool for the [Skeletor](https://deg-skeletor.github.io/) UI build tool ecosystem. By running Orko at the beginning of a project, you can build out an entire Skeletor-enabled UI project, preconfigured to work with the platform of your choice.
 
 ## Installation
 Orko is automatically installed alongside the [skeletor-cli](https://github.com/deg-skeletor/skeletor-cli) tools. Once installed, he can be initialized using the `skel init` command.
