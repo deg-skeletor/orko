@@ -20,20 +20,19 @@ module.exports = {
     },
     projectTypes: [
         {
-            name: `Custom (Supply your own Git URL)`,
-            value: 'custom'
-        },
-        {
             name: 'Magento',
-            value: 'magento'
+            value: 'magento',
+            url: 'https://github.com/deg-skeletor/orko-template-magento.git'
         },
         {
             name: 'Salesforce Commerce Cloud',
-            value: 'sfcc'
+            value: 'sfcc',
+            url: 'https://github.com/deg-skeletor/orko-template-sfcc.git'
         },
         {
             name: 'Single Page Application - React',
-            value: 'spaReact'
+            value: 'spaReact',
+            url: 'https://github.com/deg-skeletor/orko-template-spareact.git'
         },
         {
             name: 'Sitecore',

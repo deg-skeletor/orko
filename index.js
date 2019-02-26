@@ -22,9 +22,11 @@ const orko = () => {
         greet(goodbye, 'heading');
     };
 
-    return {
-        start
-    };
+    const api = {
+		start
+	};
+
+	return api;
 };
 
 module.exports = orko;
