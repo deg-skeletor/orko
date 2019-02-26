@@ -39,8 +39,8 @@ Orko is preconfigured to work with the most common CMS platforms and technology 
 ### Available Platform Repos
 * Custom (Supply your own Git repository): Coming soon
 * Magento: https://github.com/deg-skeletor/orko-template-magento
-* Salesforce: https://github.com/deg-skeletor/orko-template-sfcc
-* Single Page Application (React): https://github.com/deg-skeletor/orko-template-spareact
+* React: https://github.com/deg-skeletor/orko-template-react
+* Salesforce Commerce Cloud: https://github.com/deg-skeletor/orko-template-sfmc
 * Sitecore: https://github.com/deg-skeletor/orko-template-sitecore
 
 ### orko.config.js

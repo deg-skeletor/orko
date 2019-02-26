@@ -25,14 +25,14 @@ module.exports = {
             url: 'https://github.com/deg-skeletor/orko-template-magento.git'
         },
         {
-            name: 'Salesforce Commerce Cloud',
-            value: 'sfcc',
-            url: 'https://github.com/deg-skeletor/orko-template-sfcc.git'
+            name: 'React',
+            value: 'react',
+            url: 'https://github.com/deg-skeletor/orko-template-react.git'
         },
         {
-            name: 'Single Page Application - React',
-            value: 'spaReact',
-            url: 'https://github.com/deg-skeletor/orko-template-spareact.git'
+            name: 'Salesforce Marketing Cloud',
+            value: 'sfmc',
+            url: 'https://github.com/deg-skeletor/orko-template-sfmc.git'
         },
         {
             name: 'Sitecore',
