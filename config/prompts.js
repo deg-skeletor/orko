@@ -27,7 +27,7 @@ module.exports = [
 		name: 'customGitUrl',
 		message: 'Enter the URL or path to the Git repository for your custom template files.',
 		type: 'input',
-		validate: answer => isRequired(answer) || `You must select enter a Git repo path.`,
+		validate: answer => isRequired(answer) || `You must enter a Git repo path.`,
 	},
 	{
 		name: 'customizePackageSetup',
