@@ -22,7 +22,9 @@ Hooks are typically defined in the project templates as a way to copy specific f
 During a hook's execution, each file that is copied will be automatically analyzed for any "tokens" that match answers to questions from the onboarding step. These answer values include:
 
 * `name`: The name of your project
-* `projectType`: The platform or type of project (custom, magento, sfcc, spaReact, or sitecore)
+* `projectType`: The platform or type of project (magento, react, sfmc, sitecore or custom)
+* `projectTypeName`: The formatted name of the platform or type of project (Magento, React, Salesforce Marketing Cloud, Sitecore, Custom)
+* `templateGitUrl`: The URL or path of the platform template's Git repository  
 * `shortName`: A single-word version of the project's name (typically used as the "name" property in package.json)
 * `version`: A [SemVer](https://semver.org/)-compatible version number
 * `description`: A description of your project
@@ -37,11 +39,11 @@ Replaceable tokens inside of a template's files should follow the `{{tokenName}}
 Orko is preconfigured to work with the most common CMS platforms and technology stacks used by DEG. During installation, Orko will prompt you with the following platform choices, each of which will download relevant template files from a predefined Git repository.
 
 ### Available Platform Repos
-* Custom (Supply your own Git repository): Coming soon
 * Magento: https://github.com/deg-skeletor/orko-template-magento
 * React: https://github.com/deg-skeletor/orko-template-react
 * Salesforce Marketing Cloud: https://github.com/deg-skeletor/orko-template-sfmc
 * Sitecore: https://github.com/deg-skeletor/orko-template-sitecore
+* Custom (Supply your own Git repository): URL entered during Orko execution
 
 ### orko.config.js
 Each platform repo may contain an `orko.config.js file`, which is comprised of a configuration object. The `hooks` section of this object will define files to be copied, via an array of objects containing `src` and `dest` properties.
@@ -106,4 +108,4 @@ module.exports = {
 ```
 
 ### orko directory
-This specially-named directory is ignored during Orko's copy step and deleted during cleanup step, making it an excellent place to store template files that will be copied over during hooks defined in your `orko.config.js` file. Typical contents include `.gitignore`, `package.json` and `README.md` files that might conflict with the template repo itself.
+This specially-named directory is ignored during Orko's copy step and deleted during the cleanup step, making it an excellent place to store template files that will be copied over during hooks defined in your `orko.config.js` file. Typical contents include `.gitignore`, `package.json` and `README.md` files that might conflict with the template repo itself.

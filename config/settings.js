@@ -38,6 +38,11 @@ module.exports = {
             name: 'Sitecore',
             value: 'sitecore',
             url: 'https://github.com/deg-skeletor/orko-template-sitecore.git'
+        },
+        {
+            name: 'Custom',
+            value: 'custom',
+            url: null
         }
     ]
 };

@@ -1,6 +1,6 @@
 const settings = require('../config/settings.js');
-const {projectPath, tmpPath, projectTypes} = settings;
-const {downloadingTemplate, noSelectedTemplatePath, downloadingTemplateComplete} = require('../config/text.js');
+const {projectPath, tmpPath} = settings;
+const {downloadingTemplate, downloadingTemplateComplete} = require('../config/text.js');
 const gitP = require('simple-git/promise');
 const git = gitP(projectPath);
 const copyManager = require('../lib/copyManager')(settings);
@@ -17,32 +17,22 @@ const downloading = answers => new Promise(async(resolve, reject) => {
     ];
 
     const init = async () => {
-        getSelectedTemplate();
         sayHello();
-        await downloadTemplate();
+        await downloadTemplate(answers.templateGitUrl);
         await removeRepoJunk();
         await hookManager.runHook('afterdownload', answers);
         sayThanks();
         resolve(answers);
     };
 
-    const getSelectedTemplate = () => {
-        const {projectType} = answers;
-        selectedTemplate = projectTypes.find(project => project.value === projectType);
-        if (!selectedTemplate || !selectedTemplate.url) {
-            reject(noSelectedTemplatePath);
-            return;
-        }
-    };
-
     const sayHello = () => {
-        const downloadMessage = getDownloadMessage(downloadingTemplate, selectedTemplate);
+        const downloadMessage = getDownloadMessage(downloadingTemplate, answers);
         greet(downloadMessage);
     };
 
-    const downloadTemplate = async () => {
+    const downloadTemplate = async templateGitUrl => {
         await copyManager.makeDir(tmpPath);
-        await git.clone(selectedTemplate.url, tmpPath);
+        await git.clone(templateGitUrl, tmpPath);
     };
 
     const removeRepoJunk = async () => {
@@ -53,9 +43,10 @@ const downloading = answers => new Promise(async(resolve, reject) => {
         greet(downloadingTemplateComplete);
     };
 
-    const getDownloadMessage = (msg, {name, url}) => {
-        msg = msg.replace('{{platform}}', name);
-        return msg.replace('{{url}}', url.replace('.git', ''));
+    const getDownloadMessage = (msg, {projectType, projectTypeName, templateGitUrl}) => {
+        const correctName = projectType === 'custom' ? projectType : projectTypeName;
+        msg = msg.replace('{{platform}}', correctName);
+        return msg.replace('{{url}}', templateGitUrl.replace('.git', ''));
     };
 
     init();
