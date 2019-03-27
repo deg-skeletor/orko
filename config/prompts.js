@@ -23,6 +23,13 @@ module.exports = [
 		default: packageDefaults.projectType
 	},
 	{
+		when: response => response.projectType === 'custom',
+		name: 'customGitUrl',
+		message: 'Enter the URL or path to the Git repository for your custom template files.',
+		type: 'input',
+		validate: answer => isRequired(answer) || `You must enter a Git repo path.`,
+	},
+	{
 		name: 'customizePackageSetup',
 		message: `Would you like to customize your package.json setup? (if not, I'll use some common-sense defaults)`,
 		type: 'confirm',
