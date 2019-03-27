@@ -1,6 +1,6 @@
 {
     "name": "@deg-skeletor/orko",
-    "version": "1.0.3",
+    "version": "1.2.0",
     "description": "The scaffolding tool for the Skeletor UI build tool ecosystem",
     "main": "index.js",
     "scripts": {
