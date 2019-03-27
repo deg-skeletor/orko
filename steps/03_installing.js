@@ -29,24 +29,25 @@ const installing = answers => new Promise((resolve, reject) => {
     };
 
     const runSkeletorInstallTask = async () => {
-        const skelConfig = require(`${tmpPath}/${skelInstallName}`);
-        if (!skelConfig) {
+        try {
+            const skelInstallConfig = require(`${tmpPath}/${skelInstallName}`);
+            greet(runningSkeletorInstallTask);
+            await copyManager.move(`${tmpPath}/${skelInstallName}`, `${projectPath}/${skelInstallName}`);
+            const skelCore = require(`${projectPath}/node_modules/@deg-skeletor/core/index.js`)();
+            if (skelCore) {
+                skelCore.setConfig({
+                    tasks: [
+                        skelInstallConfig
+                    ]
+                });
+                await skelCore.runTask('install');
+                greet(skeletorInstallTaskSuccess);
+                return Promise.resolve();
+            }
+            return Promise.reject();
+        } catch {
             return Promise.resolve();
         }
-        greet(runningSkeletorInstallTask);
-        await copyManager.move(`${tmpPath}/${skelInstallName}`, `${projectPath}/${skelInstallName}`);
-        const skelCore = require(`${projectPath}/node_modules/@deg-skeletor/core/index.js`)();
-        if (skelCore) {
-            skelCore.setConfig({
-                tasks: [
-                    skelConfig
-                ]
-            });
-            await skelCore.runTask('install');
-            greet(skeletorInstallTaskSuccess);
-            return Promise.resolve();
-        }
-        return Promise.reject();
     };
 
     init();
