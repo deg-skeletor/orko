@@ -45,7 +45,7 @@ const installing = answers => new Promise((resolve, reject) => {
                 return Promise.resolve();
             }
             return Promise.reject();
-        } catch (err){
+        } catch {
             return Promise.resolve();
         }
     };
