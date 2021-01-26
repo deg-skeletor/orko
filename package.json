@@ -1,6 +1,6 @@
 {
     "name": "@deg-skeletor/orko",
-    "version": "1.2.4",
+    "version": "1.2.5",
     "description": "The scaffolding tool for the Skeletor UI build tool ecosystem",
     "main": "index.js",
     "scripts": {
@@ -17,20 +17,27 @@
         "url": "https://github.com/deg-skeletor/orko/issues"
     },
     "homepage": "https://github.com/deg-skeletor/orko#readme",
+    "files": [
+        "index.js",
+        "config",
+        "lib",
+        "steps",
+        "utils"
+    ],
     "peerDependencies": {
         "@deg-skeletor/core": "^1.1.0",
         "@deg-skeletor/cli": "^1.0.0"
     },
     "devDependencies": {
-        "eslint": "^4.17.0",
-        "jest": "^24.1.0"
+        "eslint": "7.18.0",
+        "jest": "26.6.3"
     },
     "dependencies": {
         "chalk": "^2.4.2",
         "inquirer": "^6.2.2",
         "fs-extra": "^7.0.1",
         "simple-git": "^1.107.0",
-        "replace-in-file": "^3.4.3",
+        "replace-in-file": "^6.1.0",
         "child-process-promise": "^2.2.1",
         "semver-regex": "^2.0.0"
     },

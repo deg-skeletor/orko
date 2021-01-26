@@ -1,4 +1,5 @@
 # Orko
+![Run Tests](https://github.com/deg-skeletor/orko/workflows/Run%20Tests/badge.svg)
 
 Orko is the scaffolding tool for the [Skeletor](https://deg-skeletor.github.io/) UI build tool ecosystem. By running Orko at the beginning of a project, you can build out an entire Skeletor-enabled UI project, preconfigured to work with the platform of your choice.
 
