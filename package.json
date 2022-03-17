@@ -36,7 +36,7 @@
         "chalk": "^2.4.2",
         "inquirer": "^6.2.2",
         "fs-extra": "^7.0.1",
-        "simple-git": "^1.107.0",
+        "simple-git": "^3.3.0",
         "replace-in-file": "^6.1.0",
         "child-process-promise": "^2.2.1",
         "semver-regex": "^2.0.0"
